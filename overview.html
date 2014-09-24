@@ -1,0 +1,146 @@
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>The Gelfman Blueprint</title>
+		<link rel="stylesheet" href="style.css" />
+		<!--<script src="script.js"></script>-->
+	</head>
+	<body>
+		<div class="header">
+			<div class="row">
+				<div class="grid_2 header-logo">
+					<a href="/">
+						<img src="logo.png" alt="The Gelfman Blueprint" width="165">
+					</a>
+				</div>
+				<div class="grid_4">
+					<a href="/">
+						<h2>The Gelfman Blueprint</h2>
+					</a>
+				</div>
+				<div id="useroverview" class="grid_3">
+				<br />
+				<span id="logtext">Welcome, gelfmanbp.</span>
+				<br />
+				Principal Balance: 10.6 BTC<br />
+				Total BTC earned: 2.03 BTC <br />
+				Total USD earned: $935.18 <br />
+				Total percent earned: 19.19% <br />
+				Available Balance: 12.63 BTC <br />
+				<a class="loggedin" href="logout.php"><h3>Logout</h3></a>
+				</div>
+			</div>
+		</div>
+		<div class="navigation">
+			<div class="row">
+				<div class="grid_6">
+					<div id="ticker">
+						Current Exchange Rates: 1 BTC - USD $459.89 - EUR €354.12 - CNY ¥2823.72 - GBP £285.13 - RUB 17011.33 руб.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content" class="row">
+			<br />
+			<table id="over1" class="overview" style="display:block;">
+				<tr>
+					<td class="overbox"> 
+					<span style="text-decoration:underline;">Recent Deposits:</span><br />
+					2014-08-13 00:00:00 - 10.595BTC<br />					<br /><br />
+					<span style="text-decoration:underline;">Recent Withdrawals:</span><br />
+										</td>
+					<td style="width:10%;">
+					&nbsp;
+					</td>
+					<td class="overbox">
+					<span style="text-decoration:underline;">Trading Results for Last 14 Days:</span><br />
+					2014-09-15 - 0.093BTC<br />2014-09-14 - 0.093BTC<br />2014-09-13 - 0.091BTC<br />2014-09-12 - 0.088BTC<br />2014-09-11 - 0.077BTC<br />2014-09-10 - 0.082BTC<br />2014-09-09 - 0.095BTC<br />2014-09-08 - 0.086BTC<br />2014-09-07 - 0.078BTC<br />2014-09-06 - 0.091BTC<br />2014-09-05 - 0.077BTC<br />2014-09-04 - 0.072BTC<br />2014-09-03 - 0BTC<br />2014-09-02 - 0BTC<br />					</td>
+				</tr>
+				<tr>
+					<td>
+					&nbsp;
+					</td>
+					<td>
+					&nbsp;
+					</td>
+					<td>
+					&nbsp;
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span onclick="document.getElementById('over1').style.display='none';document.getElementById('over2').style.display='block';" style="cursor:pointer;background-color:green;text-shadow:none;padding-top:10px;padding-bottom:10px;border-radius: 8px;">
+						&nbsp;&nbsp;Deposit&nbsp;&nbsp;
+						</span>
+					</td>
+					<td>
+					or
+					</td>
+					<td>
+						<span onclick="document.getElementById('over1').style.display='none';document.getElementById('over3').style.display='block';" style="cursor:pointer;background-color:red;text-shadow:none;padding-top:10px;padding-bottom:10px;border-radius: 8px;">
+						&nbsp;&nbsp;Withdraw&nbsp;&nbsp;
+						</span>
+					</td>
+				</tr>
+			</table>
+			<div id="over2" class="overview" style="display:none;">
+				<span class="returnover">
+					<a href="#" onclick="document.getElementById('over2').style.display='none';document.getElementById('over1').style.display='block';"> Back to overview</a>
+				</span>
+				<br />
+				Send bitcoins to:<br />
+				<span style="background-color:rgba(255,255,255,0.5);border-radius: 15px;text-shadow:none;">
+				1BnrkXDWUGvhVuQCktjoAzxbwHxbFxek5K
+				</span>
+				<br />
+				<img src="qrcode.png" /><br />
+				Deposits will be credited within 24 hours.
+			</div>
+			<div id="over3" class="overview" style="display:none;">
+				<span class="returnover">
+					<a href="#" onclick="document.getElementById('over3').style.display='none';document.getElementById('over1').style.display='block';"> Back to overview</a>
+				</span>
+				<br />
+				<form id="withdraw" action="#" method="post">
+				<table>
+					<tr>
+						<td colspan="2">&nbsp;</td>
+					</tr>
+					<tr>
+						<td id="withinfo" colspan="2">Please be advised that the withdrawal system is disabled until October 1st due to internal clerical work.</td>
+					</tr>
+					<tr>
+						<td colspan="2">&nbsp;</td>
+					</tr>
+					<tr>
+						<td>BTC Address:</td>
+						<td><input type="text" name="address" size="40"  disabled="disabled" /></td>
+					</tr>
+					<tr>
+						<td>Verify BTC Address:</td>
+						<td><input type="text" name="addressverify" size="40"  disabled="disabled" /></td>
+					</tr>
+					<tr>
+						<td>Withdrawal Amount (BTC):</td>
+						<td><input type="text" name="amount" size="40"  disabled="disabled" /></td>
+					</tr>
+					<tr>
+						<td>Confirm User Identifier:</td>
+						<td><input type="text" name="userid" size="40"  disabled="disabled" /></td>
+					</tr>
+					<tr>
+						<td>Confirm Password:</td>
+						<td><input type="password" name="pass" size="40"  disabled="disabled" /></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="submit" value="Withdraw" disabled="disabled" /></td>
+					</tr>
+				</table>
+				</form>
+				<br />
+				Withdrawals will be processed within 24 hours.
+			</div>
+		</div>
+	</body>
+</html>
