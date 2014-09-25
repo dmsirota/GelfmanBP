@@ -19,16 +19,15 @@ body
 	background: #353536;
 	font-size: 13px;
 	color: #fff;
-	height: 250px;
-}
-.row {
-margin-right: 0px;
-margin-left: 0px;
-height: inherit;
-padding: 15px;
+	height: 379px;
+	margin-bottom: 1em;
 }
 header > img {
 	padding-top: 1em;
+}
+.heading {
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 .site-heading {
 	font-size: 4em;
@@ -60,13 +59,25 @@ font-size: xx-large;
 border-radius: 0px;
 }
 
-
+.rate-box {
+	height: 150px;
+	width: 250px;
+	background: blue;
+	margin-bottom: 20px;
+	padding-top: 1px;
+	padding-bottom: 2px;
+	padding-left: .75em;
+	padding-right: .75em;
+}
+.sign-in {
+	font-size: large;
+}
 .newsfeed
 {
 }
 .jigsaw-bot
 {
-	font-size: 40px;
+	font-size: 2em;
 	background-color: rgba(255,255,255,0.3);
 	padding: 0 20px 20px 20px;
 	margin-top: 2%; 
@@ -81,22 +92,24 @@ border-radius: 0px;
 	background-color: #2b2b2b;
 	color: #0f0;
 	padding: 0 5px 5px 5px;
-	font-size: 60px;
+	font-size: 1em;
 	font-weight: normal;
 }
-.container {
-margin-right: 0px;
-margin-left: 0px;
-}
-@media (min-width: 1200px) {}
-.container {
-max-width: 100%;
+.led2
+{
+	font-family: ledfont;
+	background-color: #2b2b2b;
+	color: #0f0;
+	padding: 0 5px 5px 5px;
+	font-size: 24px;
+	font-weight: normal;
 }
 footer {
 	height: 150px;
 	background: #353536;
 	color: white;
 	font-size: 1.25em;
+	padding-top: 1em;
 }
 .footer-anchor {
 	color: white;
@@ -104,6 +117,16 @@ footer {
 .footer-anchor:hover {
 	color: white;
 }
+.rates
+{
+	background: #f1c40f;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	height: 50px;
+	line-height: 50px;
+}
+
 #reg
 {
 	width: 550px;
@@ -216,14 +239,7 @@ table.overview td, .overview
 {
 	padding-top: 20px;
 }
-.rates
-{
-	background: #f1c40f;
-	text-align: center;
-	font-size: 16px;
-	font-weight: bold;
-	height: 50px;
-}
+
 
 .overbox
 {
