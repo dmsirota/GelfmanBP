@@ -2,26 +2,29 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 		<title>The Gelfman Blueprint</title>
-		<link rel="stylesheet" href="style.css" />
-		<!--<script src="script.js"></script>-->
-	</head>
+		<link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+		<link rel="canonical" href="http://gelfmanbp.com" />
+		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="./css/style.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js" defer></script>
+</head>
 	<body>
 		<div class="header">
 			<div class="row">
-				<div class="grid_2 header-logo">
+				<div class="col-md-3 header-logo">
 					<a href="/">
-						<img src="logo.png" alt="The Gelfman Blueprint" width="165">
+						<img src="./img/logo.png" alt="The Gelfman Blueprint" height="65%" width="65%">
 					</a>
 				</div>
-				<div class="grid_4">
-					<a href="/">
-						<h2>The Gelfman Blueprint</h2>
-					</a>
+				<div class="col-md-6" align="center">
+					<a href="#" class="site-heading">The<br/>Gelfman<br/>Blueprint</a>
 				</div>
-				<div id="login" class="grid_3">
-					<a id="register" href="register.php">
+				<div id="login" class="col-md-3">
+					<!-- <a id="register" href="register.php">
 						<h3>Register</h3>
 					</a>
 					<br />
@@ -33,53 +36,110 @@
 						Username: <input name="user" type="text" size="15" /><br />
 						Password: <input name="pass" type="password" size="15" /><br />
 						<input name="submit" type="submit" value="Login" />
-					</form>
-				</div>
-							</div>
-		</div>
-		<div class="navigation">
-			<div class="row">
-				<div class="grid_6">
-					<div id="ticker">
-						Current Exchange Rates: 1 BTC - USD $459.97 - EUR €354.18 - CNY ¥2824.22 - GBP £285.18 - RUB 17014.29 руб.
-					</div>
+					</form> -->
+					<a href="#login" data-toggle="modal" data-target=".bs-modal-sm" align="center"><span class="glyphicon glyphicon-log-in"></span> Sign In / Register</a>
 				</div>
 			</div>
 		</div>
-		<div id="content" class="row">
-			<br />
-			The Jigsaw Bot has earned:
-			<br />
-			<br />
-			<span>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			</span>
-			<span class="led">12.365</span>
-			BTC
-			<br />
-			<br />
-			<span>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			</span>
-			in
-			<br />
-			<br />
-			<span>
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			</span>
-			<span class="led">0</span>
-			years
-			<span class="led">1</span>
-			month
-			<span class="led">29</span>
-			days
-			<br /><br />
-			<span class="viewall"><a href="#" onclick="alert('Work in progress.');">View charts</a></span>
-			<br />
+		<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+      	<h1>Sign In</h1>
+        <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="signin">
+            <form name="loginform" id="loginform" autocomplete="off" action="login.php">	
+							<div class="form-group">
+								<input type="text" name="user" maxlength="15" class="form-control" placeholder="Username" id="username" required/>
+							
+								<input type="password" name="password" maxlength="15" class="form-control" placeholder="Password" id="password" required/>
+							</div>
+							<a href="?base=main&amp;page=forgotpass">Forgot Password?</a><br/>
+							<input id="login" type="submit" class="btn btn-primary" value="Sign In"/>
+							<a href="?base=main&page=register" class="btn btn-info">Register</a>
+					    </form>
+					    <div id="message"></div>
+        </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav nav-pills nav-justified">
+						<li><a href="#">About</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contact</a></li>
+						</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		<div class="rates">
+			<div class="row">
+					<div id="ticker">
+						Current Exchange Rates: 1 BTC - USD $459.97 - EUR €354.18 - CNY ¥2824.22 - GBP £285.18 - RUB 17014.29 руб
+					</div>
+			</div>
 		</div>
+		<div class="container">
+		<div class="col-md-9 newsfeed" id="newsfeed">
+					newsfeed
+				</div>
+				<div class="col-md-3">
+					<div id="content" class="row jigsaw-bot">
+							<br/>
+							The Jigsaw Bot has earned:
+							<br/>
+							<br/>
+							<span class="led">12.365</span>
+							BTC
+							<br/>
+							<br/>
+							in
+							<br />
+							<br />
+							<span class="led">0</span>
+							Y
+							<span class="led">1</span>
+							M
+							<span class="led">29</span>
+							D
+							<br /><br />
+							<a href="#" class="btn btn-primary" onclick="alert('Work in progress.');">View charts</a>
+							<br />
+						</div>
+					</div></div>
+		<footer>
+			<div class="row">
+				<div class="col-md-4" align="left">
+					<p>© GelfmanBP 2014</p>
+				</div>
+				<div class="col-md-4" align="center">
+						<a href="#" class="footer-anchor">Terms and Conditions</a> | <a href="#" class="footer-anchor">Privacy Policy </a>
+				</div>
+				<div class="col-md-4" align="center">
+					<p>Contact Us:</p>
+					<a href="#" class="footer-anchor glyphicon glyphicon-envelope"></a> | <a href="#" class="footer-anchor glyphicon glyphicon-earphone" ></a>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
