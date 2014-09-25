@@ -14,8 +14,7 @@ body
 	padding: 0;
 	margin: 0;
 	background-image: url('bg.jpg');
-}
-.header
+}header
 {
 	background: #353536;
 	font-size: 13px;
@@ -28,7 +27,7 @@ margin-left: 0px;
 height: inherit;
 padding: 15px;
 }
-.header > img {
+header > img {
 	padding-top: 1em;
 }
 .site-heading {
@@ -42,7 +41,26 @@ padding: 15px;
 }
 .navbar {
 margin-bottom: 0px;
+height: 70px;
 }
+.nav {
+	height: 70px;
+}
+.nav-justified>li {
+float: none;
+height: inherit;
+}
+.nav-justified>li>a {
+text-align: center;
+height: inherit;
+line-height: inherit;
+font-size: xx-large;
+}
+.nav-pills>li>a {
+border-radius: 0px;
+}
+
+
 .newsfeed
 {
 }
@@ -188,12 +206,6 @@ table.overview td, .overview
 	border: 2px solid #627273;
 }
 
-#ticker
-{
-	padding: 10px;
-	font-size: 16px;
-	font-weight: bold;
-}
 
 #logtext, #useroverview
 {
@@ -208,6 +220,9 @@ table.overview td, .overview
 {
 	background: #f1c40f;
 	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	height: 50px;
 }
 
 .overbox
